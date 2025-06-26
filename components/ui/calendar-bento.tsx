@@ -52,7 +52,7 @@ export function Calendar() {
           <h2 className="mb-4 text-lg md:text-3xl font-semibold text-white">Contact the founders</h2>
           <p className="mb-2 text-xs md:text-md text-gray-400">Feel free to reach out to us!</p>
           <motion.button
-            className="w-full sm:w-auto bg-white text-[#111111] px-6 py-3 rounded-md text-sm font-semibold hover:bg-white/90 transition-colors duration-200 whitespace-nowrap shadow-sm hover:shadow-md flex-shrink-0"
+            className="w-full sm:w-auto bg-white text-[#111111] px-6 py-3 rounded-md text-sm font-semibold hover:bg-white/90 hover:text-[#111111] transition-colors duration-200 whitespace-nowrap shadow-sm hover:shadow-md flex-shrink-0"
             whileHover={{ scale: 1.03, y: -1 }}
             whileTap={{ scale: 0.97 }}
             transition={{ type: "spring", stiffness: 400, damping: 15 }}

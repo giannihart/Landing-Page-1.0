@@ -157,7 +157,7 @@ function Pricing() {
                     </div>
                   </div>
                   <div className="flex justify-start">
-                    <Button className="gap-4 bg-white text-[#111111] hover:bg-white/90">
+                    <Button className="gap-4 bg-white text-[#111111] hover:bg-white/90 hover:text-[#111111]">
                       Get Started Today <MoveRight className="w-4 h-4" />
                     </Button>
                   </div>

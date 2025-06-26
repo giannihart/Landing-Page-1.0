@@ -68,6 +68,7 @@ export function Navbar() {
             <NavLink href="/pricing">Pricing</NavLink>
             <NavLink href="/careers">Careers</NavLink>
             <NavLink href="/blog">Blog</NavLink>
+            <NavLink href="/feature-request">Feature Request</NavLink>
           </nav>
 
           {/* Desktop Auth Buttons */}
@@ -126,8 +127,8 @@ export function Navbar() {
             <a
               href="https://cal.com/giannihart/book-a-demo"
               className={cn(
-                "px-3 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-sm font-medium text-black transition-all duration-200",
-                "bg-white rounded-full hover:bg-gray-100",
+                "px-3 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-sm font-medium text-[#111111] transition-all duration-200",
+                "bg-white rounded-full hover:bg-gray-100 hover:text-[#111111]",
                 "shadow-sm hover:shadow-md",
                 "inline-block",
               )}
@@ -176,6 +177,12 @@ export function Navbar() {
                 className="block px-3 py-2 text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-800/50 rounded-lg transition-all duration-200"
               >
                 Blog
+              </a>
+              <a
+                href="/feature-request"
+                className="block px-3 py-2 text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-800/50 rounded-lg transition-all duration-200"
+              >
+                Feature Request
               </a>
             </nav>
 
