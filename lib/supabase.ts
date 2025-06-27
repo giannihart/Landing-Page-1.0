@@ -143,5 +143,5 @@ export async function getRecordCount(tableName = "email_subscriptions") {
   }
 }
 
-// Re-export with the original name so existing imports keep working
-export { testSupabaseConnection as testDatabaseConnection }
+// Export with the expected name for compatibility
+export const testDatabaseConnection = testSupabaseConnection
