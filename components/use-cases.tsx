@@ -2,7 +2,6 @@
 
 import type React from "react"
 import { Badge } from "@/components/ui/badge"
-import { GlowingEffect } from "@/components/ui/glowing-effect"
 import { Code, Users, Bot } from "lucide-react"
 
 export function UseCases() {
@@ -55,7 +54,6 @@ const UseCaseCard = ({ icon, title, description, features }: UseCaseCardProps) =
   return (
     <div className="min-h-[18rem] list-none">
       <div className="relative h-full rounded-[1.25rem] border-[0.75px] border-border p-2 md:rounded-[1.5rem] md:p-3">
-        <GlowingEffect spread={40} glow={true} disabled={false} proximity={64} inactiveZone={0.01} borderWidth={3} />
         <div className="relative flex h-full flex-col justify-between gap-4 overflow-hidden rounded-xl border-[0.75px] bg-[#111111] p-4 shadow-sm dark:shadow-[0px_0px_27px_0px_rgba(45,45,45,0.3)] md:p-5">
           <div className="relative flex flex-1 flex-col gap-3">
             <div className="w-fit rounded-lg border-[0.75px] border-border bg-muted p-2.5 text-white">{icon}</div>

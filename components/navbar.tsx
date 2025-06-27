@@ -65,7 +65,7 @@ export function Navbar() {
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-8">
-            <NavLink href="/pricing">Pricing</NavLink>
+            {/* <NavLink href="/pricing">Pricing</NavLink> */}
             <NavLink href="/careers">Careers</NavLink>
             <NavLink href="/blog">Blog</NavLink>
             <NavLink href="/feature-request">Feature Request</NavLink>
@@ -160,12 +160,12 @@ export function Navbar() {
               >
                 Documentation
               </a> */}
-              <a
+              {/* <a
                 href="/pricing"
                 className="block px-3 py-2 text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-800/50 rounded-lg transition-all duration-200"
               >
                 Pricing
-              </a>
+              </a> */}
               <a
                 href="/careers"
                 className="block px-3 py-2 text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-800/50 rounded-lg transition-all duration-200"

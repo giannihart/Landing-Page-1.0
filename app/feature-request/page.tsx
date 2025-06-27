@@ -1,6 +1,7 @@
 "use client"
 import { FeatureRequestContent } from "@/components/feature-request-content"
 import { Navbar } from "@/components/navbar"
+import { Footer7 as Footer } from "@/components/footer"
 
 export default function FeatureRequestPage() {
   return (
@@ -9,6 +10,7 @@ export default function FeatureRequestPage() {
       <div className="pt-20">
         <FeatureRequestContent />
       </div>
+      <Footer />
     </main>
   )
 }

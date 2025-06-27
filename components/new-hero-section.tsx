@@ -4,6 +4,8 @@ import type React from "react"
 import { cn } from "@/lib/utils"
 import { EmailCollection } from "@/components/ui/email-collection"
 import { Noise } from "@/components/ui/noise"
+import { FlickeringGrid } from "@/components/ui/flickering-grid"
+import { AnnouncementBanner } from "@/components/announcement-banner"
 
 interface HeroAction {
   text: string
@@ -32,61 +34,57 @@ interface HeroProps {
 
 export function NewHeroSection({ badge, title, description, actions, image }: HeroProps) {
   return (
-    <section
-      className={cn(
-        "bg-[#111111] text-white relative overflow-hidden",
-        "py-4 md:py-12 px-4 sm:px-6",
-        "fade-bottom pb-0 pt-20 sm:pt-48",
-      )}
-    >
-      {/* Noise Background */}
-      <Noise />
+    <>
+      <section
+        className={cn(
+          "bg-[#111111] text-white relative overflow-hidden",
+          "py-4 md:py-12 px-4 sm:px-6",
+          "fade-bottom pb-0 pt-16 sm:pt-24",
+        )}
+      >
+        {/* Noise Background */}
+        <Noise />
 
-      <div className="relative z-10 mx-auto flex max-w-6xl flex-col gap-4 pt-4 sm:gap-16 sm:pt-16 font-inter">
-        <div className="flex flex-col items-center gap-3 text-center sm:gap-8 md:gap-12">
-          {/* Badge */}
-          {/* {badge && (
-            <Badge variant="outline" className="animate-appear gap-2 border-gray-600 text-white">
-              <span className="text-gray-400">Our beta will be live 5/31 📣</span>
-              <a href={badge.action.href} className="flex items-center gap-1 text-white">
-                Try now
-                <ArrowRightIcon className="h-3 w-3" />
-              </a>
-            </Badge>
-          )} */}
+        {/* Flickering Grid Background */}
+        <div className="absolute inset-0 z-0">
+          <FlickeringGrid
+            className="w-full h-full"
+            squareSize={4}
+            gridGap={6}
+            flickerChance={0.3}
+            color="rgb(255, 255, 255)"
+            maxOpacity={0.08}
+          />
+          {/* Gradient overlay to fade the grid from the bottom */}
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#111111]/30 to-[#111111]" />
+        </div>
 
-          {/* Title */}
-          <h1 className="relative z-10 inline-block animate-appear text-6xl lg:text-8xl text-white mt-4 sm:mt-16 font-bold">
-            <span className="bg-gradient-to-r from-[#dd7bbb] via-[#d79f1e] to-[#5a922c] bg-clip-text text-transparent">
-              Automate
-            </span>{" "}
-            your
-            <br />
-            API docs workflow
-          </h1>
+        <div className="relative z-10 mx-auto flex max-w-6xl flex-col gap-4 pt-8 sm:gap-16 sm:pt-20 font-inter">
+          <div className="flex flex-col items-center gap-3 text-center sm:gap-8 md:gap-12">
+            {/* Static Announcement Banner - moved down with increased padding */}
+            <div className="relative z-10 animate-appear opacity-0 delay-75 mt-4 sm:mt-8">
+              <AnnouncementBanner message="🚀 Launching on Product Hunt July 20th" />
+            </div>
 
-          {/* Description */}
-          <p className="text-lg leading-relaxed tracking-tight text-gray-400 max-w-xl text-center mx-auto relative z-10 animate-appear opacity-0 delay-100 px-4 sm:px-0">
-            Devscribe boosts your team's efficiency by automating and managing your API documentation, allowing
-            readability for all.
-          </p>
+            {/* Title - now after banner */}
+            <h1 className="relative z-10 inline-block animate-appear text-6xl lg:text-8xl text-white mt-4 font-bold sm:mt-0">
+              <span className="text-white italic">Automate</span> your
+              <br />
+              API docs workflow
+            </h1>
 
-          {/* Email Collection */}
-          <div className="relative z-10 animate-appear opacity-0 delay-300 w-full max-w-md px-4 sm:px-0">
-            <EmailCollection />
-          </div>
+            {/* Description */}
+            <p className="text-lg leading-relaxed tracking-tight text-gray-400 max-w-xl text-center mx-auto relative z-10 animate-appear opacity-0 delay-100 px-4 sm:px-0">
+              Devscribe is your out-of-the-box API docs platform that generates API docs for you. From codebase to beautiful API docs in seconds. 
+            </p>
 
-          {/* Terms and Privacy Policy */}
-          <div className="relative z-10 animate-appear opacity-0 delay-500 flex flex-col sm:flex-row gap-4 sm:gap-8 items-center justify-center text-sm">
-            <button className="text-white hover:text-gray-300 transition-colors duration-200 underline underline-offset-4">
-              Terms and Conditions
-            </button>
-            <button className="text-white hover:text-gray-300 transition-colors duration-200 underline underline-offset-4">
-              Privacy Policy
-            </button>
+            {/* Email Collection */}
+            <div className="relative z-10 animate-appear opacity-0 delay-300 w-full max-w-md px-4 sm:px-0">
+              <EmailCollection />
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   )
 }

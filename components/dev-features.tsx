@@ -5,13 +5,12 @@ import { MockupFrame } from "@/components/ui/mockup"
 export function DevFeatures() {
   return (
     <section className="overflow-hidden py-0 md:py-0 bg-[#111111] text-gray-300">
-      <div className="mx-auto max-w-5xl space-y-8 px-4 md:px-6 lg:px-8">
+      <div className="mx-auto max-w-5xl space-y-8 px-4 md:px-6 lg:px-8 py-[100px]">
         <div className="relative z-10 max-w-2xl">
           <Badge className="bg-white text-[#111111] hover:bg-white/90 mb-4">Developers</Badge>
           <h2 className="text-4xl font-semibold lg:text-5xl text-white">Built to ship projects faster</h2>
           <p className="mt-4 text-lg text-gray-400">
-            Empower your team with workflows that adapt to your needs, whether you prefer git synchronization or a AI
-            Agents interface.
+            {"Devscribe boosts your team\'s efficiency by automating and managing your API documentation,  readable by all: Humans and AI Agents."}
           </p>
         </div>
         <div className="relative -mx-4 rounded-3xl p-3 md:-mx-12 lg:col-span-3">

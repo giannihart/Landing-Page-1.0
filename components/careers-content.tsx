@@ -1,7 +1,7 @@
 import { MapPin, Clock, ArrowRight, Briefcase } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import { GlowingEffect } from "@/components/ui/glowing-effect"
+// import { GlowingEffect } from "@/components/ui/glowing-effect"
 
 const jobOpenings = [
   {
@@ -108,14 +108,14 @@ function CareersContent() {
             {/* Software Engineer */}
             <div className="min-h-[16rem] list-none">
               <div className="relative h-full rounded-[1.25rem] border-[0.75px] border-border p-2 md:rounded-[1.5rem] md:p-3">
-                <GlowingEffect
+                {/* <GlowingEffect
                   spread={40}
                   glow={true}
                   disabled={false}
                   proximity={64}
                   inactiveZone={0.01}
                   borderWidth={3}
-                />
+                /> */}
                 <div className="relative flex h-full flex-col justify-between gap-3 overflow-hidden rounded-xl border-[0.75px] bg-[#111111] p-5 shadow-sm dark:shadow-[0px_0px_27px_0px_rgba(45,45,45,0.3)] md:p-6">
                   <div className="relative flex flex-1 flex-col gap-4">
                     <div className="flex items-center gap-2">
@@ -167,14 +167,14 @@ function CareersContent() {
             {/* Frontend Engineer */}
             <div className="min-h-[16rem] list-none">
               <div className="relative h-full rounded-[1.25rem] border-[0.75px] border-border p-2 md:rounded-[1.5rem] md:p-3">
-                <GlowingEffect
+                {/* <GlowingEffect
                   spread={40}
                   glow={true}
                   disabled={false}
                   proximity={64}
                   inactiveZone={0.01}
                   borderWidth={3}
-                />
+                /> */}
                 <div className="relative flex h-full flex-col justify-between gap-3 overflow-hidden rounded-xl border-[0.75px] bg-[#111111] p-5 shadow-sm dark:shadow-[0px_0px_27px_0px_rgba(45,45,45,0.3)] md:p-6">
                   <div className="relative flex flex-1 flex-col gap-4">
                     <div className="flex items-center gap-2">
@@ -226,14 +226,14 @@ function CareersContent() {
             {/* Sales Development Rep */}
             <div className="min-h-[16rem] list-none">
               <div className="relative h-full rounded-[1.25rem] border-[0.75px] border-border p-2 md:rounded-[1.5rem] md:p-3">
-                <GlowingEffect
+                {/* <GlowingEffect
                   spread={40}
                   glow={true}
                   disabled={false}
                   proximity={64}
                   inactiveZone={0.01}
                   borderWidth={3}
-                />
+                /> */}
                 <div className="relative flex h-full flex-col justify-between gap-3 overflow-hidden rounded-xl border-[0.75px] bg-[#111111] p-5 shadow-sm dark:shadow-[0px_0px_27px_0px_rgba(45,45,45,0.3)] md:p-6">
                   <div className="relative flex flex-1 flex-col gap-4">
                     <div className="flex items-center gap-2">

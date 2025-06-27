@@ -1,30 +1,50 @@
-# Sidebar component
+# Email Collection System
 
-*Automatically synced with your [v0.dev](https://v0.dev) deployments*
+A Next.js application with Supabase integration for collecting email subscriptions.
 
-[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/gianniharts-projects/v0-sidebar-component)
-[![Built with v0](https://img.shields.io/badge/Built%20with-v0.dev-black?style=for-the-badge)](https://v0.dev/chat/projects/mPdiGI0mHpI)
+## Features
 
-## Overview
+- ✅ Email collection form in hero section
+- ✅ Supabase database integration
+- ✅ Input validation with Zod
+- ✅ Duplicate email handling
+- ✅ Admin dashboard for viewing subscriptions
+- ✅ CSV export functionality
+- ✅ Responsive design
 
-This repository will stay in sync with your deployed chats on [v0.dev](https://v0.dev).
-Any changes you make to your deployed app will be automatically pushed to this repository from [v0.dev](https://v0.dev).
+## Setup
 
-## Deployment
+1. **Create Supabase Project**
+   - Go to [supabase.com](https://supabase.com)
+   - Create a new project
 
-Your project is live at:
+2. **Run Database Setup**
+   - Copy the SQL from `scripts/setup-database.sql`
+   - Paste and run in Supabase SQL Editor
 
-**[https://vercel.com/gianniharts-projects/v0-sidebar-component](https://vercel.com/gianniharts-projects/v0-sidebar-component)**
+3. **Environment Variables**
+   - Copy `.env.example` to `.env.local`
+   - Add your Supabase credentials
 
-## Build your app
+4. **Install Dependencies**
+   \`\`\`bash
+   npm install
+   \`\`\`
 
-Continue building your app on:
+5. **Run Development Server**
+   \`\`\`bash
+   npm run dev
+   \`\`\`
 
-**[https://v0.dev/chat/projects/mPdiGI0mHpI](https://v0.dev/chat/projects/mPdiGI0mHpI)**
+## Usage
 
-## How It Works
+- Visit `/` to see the email collection form
+- Visit `/admin` to view subscription data
+- Export subscriber data as CSV
 
-1. Create and modify your project using [v0.dev](https://v0.dev)
-2. Deploy your chats from the v0 interface
-3. Changes are automatically pushed to this repository
-4. Vercel deploys the latest version from this repository
+## Environment Variables
+
+\`\`\`
+NEXT_PUBLIC_SUPABASE_URL=your_project_url
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your_anon_key
+SUPABASE_SERVICE_ROLE_KEY=your_service_role_key

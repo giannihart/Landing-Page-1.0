@@ -1,5 +1,4 @@
 import { Badge } from "@/components/ui/badge"
-import { GlowingEffect } from "@/components/ui/glowing-effect"
 
 const blogPosts = [
   {
@@ -90,14 +89,6 @@ function BlogContent() {
             <div className="w-full">
               <div className="min-h-[24rem] list-none">
                 <div className="relative h-full rounded-[1.25rem] border-[0.75px] border-border p-2 md:rounded-[1.5rem] md:p-3">
-                  <GlowingEffect
-                    spread={40}
-                    glow={true}
-                    disabled={false}
-                    proximity={64}
-                    inactiveZone={0.01}
-                    borderWidth={3}
-                  />
                   <div className="relative flex h-full flex-col justify-center items-center gap-6 overflow-hidden rounded-xl border-[0.75px] bg-[#111111] p-6 shadow-sm dark:shadow-[0px_0px_27px_0px_rgba(45,45,45,0.3)] md:p-8">
                     <div className="text-center space-y-4">
                       <Badge className="bg-[#333333] text-white hover:bg-[#444444]">Coming Soon</Badge>

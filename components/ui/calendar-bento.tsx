@@ -103,7 +103,7 @@ export function BentoCard({
   rowSpan = 8,
   colSpan = 7,
   className = "",
-  showHoverGradient = true,
+  showHoverGradient = false,
   hideOverflow = true,
   linkTo,
 }: BentoCardProps) {
@@ -133,7 +133,7 @@ export function BentoCard({
           </svg>
         </div>
       )}
-      {showHoverGradient && (
+      {/* {showHoverGradient && (
         <div
           className="pointer-events-none absolute inset-0 z-30 opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100"
           style={{
@@ -141,7 +141,7 @@ export function BentoCard({
               "linear-gradient(135deg, rgba(221, 123, 187, 0.1) 0%, rgba(215, 159, 30, 0.1) 25%, rgba(90, 146, 44, 0.1) 50%, rgba(76, 120, 148, 0.1) 75%, rgba(221, 123, 187, 0.1) 100%)",
           }}
         ></div>
-      )}
+      )} */}
       {children}
     </div>
   )
