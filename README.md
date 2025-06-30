@@ -10,7 +10,7 @@ A Next.js application with Supabase integration for collecting email subscriptio
 - ✅ Duplicate email handling
 - ✅ Admin dashboard for viewing subscriptions
 - ✅ CSV export functionality
-- ✅ Responsive design
+- ✅ Responsive design Hi
 
 ## Setup
 
