@@ -10,7 +10,7 @@ const CalendarDay: React.FC<{ day: number | string; isHeader?: boolean }> = ({ d
   return (
     <div
       className={`col-span-1 row-span-1 flex h-8 w-8 items-center justify-center ${
-        isHeader ? "" : "rounded-xl transition-all duration-300 hover:scale-105"
+        isHeader ? "" : "rounded-xl transition-all hover:scale-105"
       } text-gray-400`}
     >
       <span className={`font-medium ${isHeader ? "text-xs text-gray-500" : "text-sm"}`}>{day}</span>
@@ -44,10 +44,9 @@ export function Calendar() {
 
   return (
     <BentoCard height="h-auto" linkTo={bookingLink}>
-      <div className=" grid h-full  gap-5">
+      <div className="flex flex-col h-full gap-3">
         <div className="">
-          <h2 className="mb-4 text-lg md:text-3xl font-semibold text-white">Contact the founders</h2>
-          <p className="mb-2 text-xs md:text-md text-gray-400">Feel free to reach out to us!</p>
+          <h2 className="mb-3 text-lg md:text-3xl font-semibold text-white">Contact the founders</h2>
           <motion.button
             className="w-full sm:w-auto bg-white text-[#111111] px-6 py-3 rounded-md text-sm font-semibold hover:bg-white/90 hover:text-[#111111] transition-colors duration-200 whitespace-nowrap shadow-sm hover:shadow-md flex-shrink-0"
             whileHover={{ scale: 1.03, y: -1 }}
@@ -57,14 +56,14 @@ export function Calendar() {
             Book a demo
           </motion.button>
         </div>
-        <div className="flex justify-center transition-all duration-500 ease-out md:group-hover:-right-12 md:group-hover:top-5">
-          <div>
-            <div className="h-full w-[550px] rounded-[24px] border border-gray-500/20 bg-[#111111]/80 p-2 transition-colors duration-300 group-hover:border-gray-400/30">
+        <div className="flex justify-center flex-1">
+          <div className="w-full max-w-[450px]">
+            <div className="w-full rounded-[24px] border border-gray-500/20 bg-[#111111]/80 p-2 transition-colors group-hover:border-gray-400/30">
               <div
-                className="h-full rounded-2xl border border-gray-600/10 bg-[#111111]/90 p-3 backdrop-blur-sm"
+                className="w-full rounded-2xl border border-gray-600/10 bg-[#111111]/90 p-3 backdrop-blur-sm"
                 style={{ boxShadow: "0px 2px 4px 0px rgba(200, 200, 200, 0.05) inset" }}
               >
-                <div className="flex items-center space-x-2 text-white">
+                <div className="flex items-center space-x-2 text-white mb-3">
                   <p className="text-sm text-white">
                     <span className="font-medium">
                       {currentMonth}, {currentYear}
@@ -73,7 +72,7 @@ export function Calendar() {
                   <span className="h-1 w-1 rounded-full ">&nbsp;</span>
                   <p className="text-xs text-white">30 min call</p>
                 </div>
-                <div className="mt-4 grid grid-cols-7 grid-rows-5 gap-2 px-4">{renderCalendarDays()}</div>
+                <div className="grid grid-cols-7 grid-rows-6 gap-2 px-2">{renderCalendarDays()}</div>
               </div>
             </div>
           </div>
@@ -104,12 +103,12 @@ export function BentoCard({
 }: BentoCardProps) {
   const cardContent = (
     <div
-      className={`group relative flex flex-col rounded-2xl border border-gray-500/20 bg-[#111111] p-6 backdrop-blur-sm transition-all duration-300 hover:border-gray-400/30 hover:bg-[#111111]/90 w-full max-w-5xl mx-auto ${
+      className={`group relative flex flex-col rounded-2xl border border-gray-500/20 bg-[#111111] p-6 backdrop-blur-sm transition-all hover:border-gray-400/30 hover:bg-[#111111]/90 w-full max-w-5xl mx-auto ${
         hideOverflow && "overflow-hidden"
       } ${height} row-span-${rowSpan} col-span-${colSpan} ${className}`}
     >
       {linkTo && (
-        <div className="absolute bottom-4 right-6 z-[999] flex h-12 w-12 rotate-6 items-center justify-center rounded-full bg-white opacity-0 transition-all duration-300 ease-in-out group-hover:translate-y-[-8px] group-hover:rotate-0 group-hover:opacity-100">
+        <div className="absolute bottom-4 right-6 z-[999] flex h-12 w-12 rotate-6 items-center justify-center rounded-full bg-white opacity-0 transition-all ease-in-out group-hover:translate-y-[-8px] group-hover:rotate-0 group-hover:opacity-100">
           <svg className="h-6 w-6 text-[#111111]" width="24" height="24" fill="none" viewBox="0 0 24 24">
             <path
               stroke="currentColor"

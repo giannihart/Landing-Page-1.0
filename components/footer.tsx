@@ -80,6 +80,8 @@ export const Footer7 = ({
             <Image
               src="/images/group-19.png"
               alt={logo.title}
+              width={150}
+              height={32}
               className="h-8 w-auto object-contain"
               style={{
                 imageRendering: "auto",

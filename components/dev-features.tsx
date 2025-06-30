@@ -52,7 +52,7 @@ export function DevFeatures() {
               <h3 className="text-sm font-medium text-white">Web Editor</h3>
             </div>
             <p className="text-gray-400 text-sm">
-              Effortlessly editing and formatting of the docs, ensuring professional-quality output with minimal effort.
+              Effortlessly editing and formatting of the docs, ensuring professional quality output with minimal effort.
             </p>
           </div>
           <div className="space-y-2">

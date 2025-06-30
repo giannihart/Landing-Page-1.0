@@ -56,6 +56,8 @@ export function Navbar() {
               <Image
                 src="/images/group-19.png"
                 alt="Company Logo"
+                width={120}
+                height={24}
                 className="h-5 sm:h-6 w-auto object-contain"
                 style={{
                   imageRendering: "auto",

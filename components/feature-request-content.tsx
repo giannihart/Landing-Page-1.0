@@ -54,7 +54,7 @@ function FeatureRequestContent() {
   return (
     <div className="w-full py-16 lg:py-24 bg-[#111111] text-white min-h-screen">
       <div className="container mx-auto px-4 md:px-6 lg:px-8">
-        <div className="flex text-center justify-center items-center gap-12 flex-col max-w-6xl mx-auto font-inter">
+        <div className="flex text-center justify-center items-center gap-12 flex-col max-w-4xl mx-auto font-inter">
           <div className="space-y-6">
             <Badge className="bg-white text-[#111111] hover:bg-white/90">Feature Request</Badge>
             <div className="flex gap-4 flex-col">
@@ -92,7 +92,7 @@ function FeatureRequestContent() {
                     </p>
                     <div className="flex flex-col sm:flex-row gap-3 justify-center items-center">
                       <a
-                        href="https://cal.com/giannihart/book-a-demo"
+                        href="https://cal.com/giannihart/feature-request"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-block border border-gray-600 text-[#111111] bg-white px-6 py-3 rounded-md text-sm font-semibold hover:bg-gray-100 hover:text-[#111111] transition-colors duration-200 whitespace-nowrap"
